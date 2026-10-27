@@ -1,0 +1,18 @@
+<h1>Padre compra</h1>
+
+@if( this.favorito != null){
+    <h3 style="color: green;">Tu producto favorito es: {{favorito.nombre}}</h3>
+}
+
+@if( this.sumaTotal){
+    <h3 style="color: darkorchid;">La suma total de los productos es: {{sumaTotal}}</h3>
+}
+
+
+@for (prod of productos; track prod) {
+  <app-hijo-compra
+    [producto]="prod"
+    (seleccionarProducto)="seleccionarProducto($event)"
+    (sumarProducto)="sumarTotal($event)">
+  </app-hijo-compra>
+}

@@ -1,0 +1,17 @@
+<h2>Elige tu juego favorito</h2>
+
+<!-- Muestra el favorito si ya hay uno seleccionado -->
+@if (favorito != null) {
+  <h3 style="color: green;">Has elegido: {{ favorito.titulo }}</h3>
+}
+
+<hr>
+
+<!-- Recorremos el array de juegos que tengas en el TypeScript del padre -->
+@for (juego of videojuegos; track juego) {
+  <!-- [juego] es el @Input, (seleccionarJuego) es el @Output -->
+  <app-hijo-votacion 
+    [juego]="juego" 
+    (seleccionarJuego)="seleccionarJuegoFavorito($event)">
+  </app-hijo-votacion>
+}

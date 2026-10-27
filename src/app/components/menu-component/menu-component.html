@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <!-- Logo o marca opcional, mantenemos la estructura de la navbar -->
+        <a class="navbar-brand" [routerLink]="['/']">App Cómics</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/']">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['videojuegos']">Videojuegos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['numeros']">Numeros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['favoritos']">Juegos Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['compras']">Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['comicssimple']">Comics Simple</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['comicsjson']">Comics JSON</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['comicsexcel']">Comics Excel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['departamentos']">Departamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['create']">Crear Departamento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['departamentosmultiple']">Departamentos Multiples</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

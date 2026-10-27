@@ -1,0 +1,9 @@
+<h1>Comics Excel</h1>
+
+<button (click)="cargarExcel()">Cargar Comics</button>
+
+@for(comic of comics; track comic){
+    <h3>Titulo: {{comic.nombre}}</h3>
+    <h3>Descripcion: {{comic.descripcion}}</h3>
+    <img src={{comic.imagen}} style="width: 100px; height: 100px;"/>
+}

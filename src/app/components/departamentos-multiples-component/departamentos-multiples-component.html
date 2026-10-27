@@ -1,0 +1,25 @@
+<h1>Múltiples Departamentos</h1>
+
+<form>
+    <label>Selecciona varios departamentos</label>
+    <select multiple class="form-control" #selectmultiple style="height: 150px;">
+        @if (departamentos) {
+            @for(depart of departamentos; track depart.numero){
+                <option [value]="depart.numero">{{depart.nombre}}</option>
+            }
+        }
+    </select>
+    <button type="button" class="btn btn-primary mt-2" (click)="buscarVarios()">Buscar</button>
+</form>
+
+@if (departamentosSeleccionados.length > 0){
+    <div class="row">
+    @for(dep of departamentosSeleccionados; track dep.numero){
+        <div class="card p-3 mt-3 shadow-sm border-info">
+            <h4 class="text-info">{{dep.nombre}}</h4>
+            <p>ID: {{dep.numero}}</p>
+            <p>Localidad: {{dep.localidad}}</p>
+        </div>
+    }
+    </div>
+}

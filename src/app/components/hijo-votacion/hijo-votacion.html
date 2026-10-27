@@ -1,0 +1,9 @@
+<div style="border: 1px solid blue; padding: 10px; margin: 5px; display: inline-block;">
+  <!-- Accedemos a las propiedades del objeto Videojuego que llega por @Input -->
+  <h3>{{ juego.titulo }}</h3>
+  <h3>{{ juego.genero }}</h3>
+  <h3>{{ juego.precio }}</h3>
+  
+  <!-- Llama al método de tu TypeScript que ejecuta el emit() -->
+  <button (click)="seleccionarJuegoFavorito()">Seleccionar Favorito</button>
+</div>
